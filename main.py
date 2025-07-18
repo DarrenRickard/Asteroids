@@ -10,7 +10,7 @@ def main():
     while True:
         screen.fill("black")
         pygame.display.flip()
-        fpsClock.tick(fps) 
+        dt = fpsClock.tick(fps) / 1000
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
